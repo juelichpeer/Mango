@@ -3,9 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inquiry</title>
+  <title>Inquiry\1
+<!-- LEAD_MANGO_PASSWORD_GATE -->
+<script>
+(function(){
+  var PASS = "ohfee2Ju";
+  document.addEventListener('DOMContentLoaded', function(){
+    var ok = sessionStorage.getItem('lm_ok') === '1';
+    if(!ok){
+      var entered = prompt('Password');
+      if(entered !== PASS){
+        document.body.innerHTML = '<div style="font-family:system-ui,sans-serif;padding:24px">Wrong password.</div>';
+        return;
+      }
+      sessionStorage.setItem('lm_ok','1');
+    }
+  });
+})();
+</script>
 
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <style>
     body{
